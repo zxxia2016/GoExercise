@@ -16,7 +16,11 @@
 
 // demo v3: Return and handle an error
 
-// TODO: https://go.dev/doc/tutorial/create-module
+// demo v4: Return an random greetings
+
+// TODO:
+// https://go.dev/doc/tutorial/create-module
+// https://go.dev/doc/effective_go
 
 package main
 
@@ -30,12 +34,30 @@ import (
 )
 
 func main() {
+	// demo v1 Hello World
 	fmt.Println("Hello, World!")
 	fmt.Println(quote.Go())
 
-	message, errors := greetings.Hello("")
-	if errors != nil {
-		log.Fatal(errors)
+	// demo v2: Create a Go module
+	message1 := greetings.Hello1("Gladys")
+	fmt.Println(message1)
+
+	// demo v3: Return and handle an error
+	message2, err := greetings.Hello2("Gladys")
+	if err != nil {
+		log.Fatal(err)
 	}
-	fmt.Println(message)
+	fmt.Println(message2)
+
+	// demo v4: Return an random greetings
+	message3, err := greetings.Hello3("Gladys")
+	fmt.Println(message3)
+
+	// demo v5: Return greetings for multiple people
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(messages)
 }
