@@ -34,6 +34,9 @@
 // TODO:
 // https://go.dev/doc/tutorial/create-module
 // https://go.dev/doc/effective_go
+// A Tour of Go: https://go.dev/tour
+// Managing dependencies: https://go.dev/doc/modules/managing-dependencies
+// Developing and publishing modules: https://go.dev/doc/modules/developing
 
 package main
 
