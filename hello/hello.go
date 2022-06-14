@@ -18,6 +18,19 @@
 
 // demo v4: Return an random greetings
 
+// demo v5: Return greetings for multiple people
+
+// demo v6: Add a test
+// Ending a file's name with _test.go tells the go test command that this file contains test functions.
+// $ go test (-v)
+// Example: greetings_test.go
+
+// demo v7: Compile and install the application
+// $ go build // >> hello.exe
+// $ go list -f '{{.Target}}' // discover the install path
+// $ go env -w GOBIN=C:\path\to\your\bin // set install path
+// $ go install
+
 // TODO:
 // https://go.dev/doc/tutorial/create-module
 // https://go.dev/doc/effective_go
@@ -60,4 +73,5 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(messages)
+
 }
