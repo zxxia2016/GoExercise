@@ -13,5 +13,6 @@
   - `go test`
 - Go Runtime
   - `$GOROOT/src/runtime`
+  - 判断运行 Go 程序的操作系统类型`runtime.GOOS == "windows"`
   - 依赖轻松，只需一个单独的静态文件；单体积较大
 - Go 解释器

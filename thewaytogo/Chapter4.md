@@ -80,12 +80,6 @@
 
 - 简短形式，使用 := 赋值操作符;不可以再次对于相同名称的变量使用初始化声明，例如：`a := 20`又`a := 20`
 
-## init 函数
-
-- 全局声明中初始化，也可以在 `init()` 函数中初始化；它不能够被人为调用，而是在每个包完成初始化后自动执行，并且执行优先级比 `main()` 函数高。
-
-  `init()` 函数也经常被用在当一个程序开始之前调用后台执行的 goroutine，如下面这个例子当中的 `backend()`：
-
 ## 基本类型和运算符
 
 - `int、uint 和 uintptr`
@@ -108,6 +102,9 @@
 
 - `Join 拼接` `s += "world!"` `bytes.Buffer` `HasPrefix 以开头` `HasSuffix 以结尾` `Contains` `Index` `LastIndex` `Replace` `Count` `Repeat` `ToLower` `ToUpper` `Trim TrimSpace TrimLeft TrimRight修剪字符串` `Fields Split 分割字符串` `NewReader`
 - `strconv` 包
+- 判断一个字符串是否为空：
+  - `if str == "" { ... }`
+  - `if len(str) == 0 {...}`
 
 ## 时间和日期
 
