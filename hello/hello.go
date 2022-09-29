@@ -43,6 +43,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"runtime"
 
 	"rsc.io/quote"
 
@@ -77,4 +78,25 @@ func main() {
 	}
 	fmt.Println(messages)
 
+	fmt.Println("value:", f())
+
+	where := func() {
+		_, file, line, _ := runtime.Caller(1)
+		log.Printf("where: %s:%d", file, line)
+	}
+
+	where()
+
+	var where1 = log.Print
+	func1 := func() {
+		where1(111)
+	}
+	func1()
+}
+
+func f() (ret int) {
+	defer func() {
+		ret++
+	}()
+	return 1
 }
