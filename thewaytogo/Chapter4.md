@@ -3,6 +3,7 @@
 ## Go 程序的基本结构和要素
 
 - 包：`package main`
+  标准库位于：`$GOROOT/pkg/`
 
   导入: `import "fmt"; import "os"`
 
@@ -19,7 +20,7 @@
 
   别名：`import fm "fmt"`
 
-- 左大括号 { 必须与方法的声明放在同一行
+- 左大括号 `{` 必须与方法的声明放在同一行
 
   ```go
   func functionName(parameter_list) (return_value_list) {
