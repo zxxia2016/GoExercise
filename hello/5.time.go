@@ -18,4 +18,9 @@ func main5() {
 	week := 60 * 60 * 24 * 7 * 1e9
 	weekFromNow := t.Add(time.Duration(week))
 	fmt.Println(weekFromNow)
+
+	start := time.Now()
+	end := time.Now()
+	delta := end.Sub(start)
+	fmt.Println("delta:", delta)
 }

@@ -6,3 +6,4 @@
 - d: `strings.TrimSpace(s)` `strings.Trim(s, "cut")` `TrimLeft()` `TrimRight()`
 - s（static统计）:`string.Count`
 - striconv相关
+- rune类型
